@@ -41,6 +41,14 @@ pipeline {
             }
         }
         
+                
+        stage('Run Container on the Server'){
+            steps {
+                 echo 'Run Container on the Server..'
+            }
+        }
+           
+        
         
         
     }
