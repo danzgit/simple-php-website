@@ -43,12 +43,13 @@ pipeline {
         
                 
         stage('Run Container on the Server'){
-            def dockerRun = 'pwd'            
+            //def dockerRun = 'pwd'            
             steps {
                 echo 'Run Container on the Server..'
                 
                 sshagent(['devops_ci_cd_pipeline']) {
-                sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.26.242 ${dockerRun}"
+                //sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.26.242 ${dockerRun}"
+                sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.26.242 pwd"
                 }
                 
             }
