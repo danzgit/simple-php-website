@@ -33,7 +33,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script{
-                        docker.withRegistry('${DOCKER_IMAGE_REPOSITORY}', 'ecr:${ECR_REGION}:${AWS_JENKINS_CREDS}') {
+                        docker.withRegistry("${DOCKER_IMAGE_REPOSITORY}", "ecr:${ECR_REGION}:${AWS_JENKINS_CREDS}") {
                     app.push("${env.BUILD_NUMBER}")
                     app.push("latest")
                     }
