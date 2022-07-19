@@ -40,15 +40,7 @@ pipeline {
                 }
             }
         }
-        stage('Run Container on the Server'){
-             //def dockerRun = 'docker run -p 8080:8080 -d --name my-app kammana/my-app:2.0.0'
-             //def dockerRun = 'docker-compose run -d advise-service'
-            def dockerRun = 'pwd'
-             
-             sshagent(['devops_ci_cd_pipeline']) {
-               sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.26.242 ${dockerRun}"
-             }
-           }            
+        
         
         
     }
