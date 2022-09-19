@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM php:7.4-cli
 
 WORKDIR /app
 
